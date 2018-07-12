@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title %}
+       Login or Register to browse locations
+{% endblock %}
+
+    {% block body %}
+       <div id=fullpage> 
+           <div class="form-div">
+               <p class="form_label">Register to explore destinations</p>
+               <form action="{{ url_for('register') }}" method="post">
+                 <p><input type="text" placeholder="Enter Login id"></p>
+                 <p><input type="password" placeholder="**********"></p>
+                 <p><input type="text" placeholder="Enter First Name"></p>
+                 <p><input type="text" placeholder="Enter Last Name"></p>
+                 <p><input type="text" placeholder="Enter Email"></p>
+                 <p><input type="submit" value="SIGN UP"></p>
+             </form>
+         </div>
+     </div>
+
+    {% endblock %}
+          </div>
+        </body>
+ </html>

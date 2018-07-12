@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flights
+    {% endblock %}
+    {% block body %}
+        <h1>Location Details</h1>
+            <table class="table table-striped">
+                <thead>
+                    <th scope="col">City</th>
+                    <th scope="col">Zip</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Population</th>
+                </thead>
+                <tbody>
+                {% for zip in zip_code %}
+                <tr>
+                    <th scope="row">{{ zip.city }}</th>
+                    <td><a ref="{{ url_for('locweat',Zip= zip.zip_code) }}" class="btn btn-info" role="button">Get Weather Update</a></td>
+                    <td>{{ zip.state }}</td>
+                    <td>{{ zip.latitude }}</td>
+                    <td>{{ zip.longitude }}</td>
+                    <td>{{ zip.population }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% endblock %}
+

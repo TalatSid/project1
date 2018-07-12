@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title %}
+       User already exists - Login
+{% endblock %}
+
+    {% block body %}
+           <div class="form-group">
+               <form action="{{ url_for('register') }}" method="post">
+                <div class="form-div">
+                 <p class="form_label">Login to find more</p>
+                 <p><input class="form-control" name="login_n" type="text" placeholder="Enter Login id"></p>
+                 <p><input class="form-control" name="login_p"  type="password" placeholder="**********"></p>
+                 <p><input class="form-control" name="signin" type="submit"  value="SIGN IN"></p>
+             </div>
+             </form>
+         </div>
+    {% endblock %}
+        </body>
+ </html>
